@@ -1,0 +1,36 @@
+<section id="body-bg">
+  <div class="header">
+    <div class="select-le"></div>
+
+    <div class="logo">
+      <img class="img-fluid" src="assets/images/white-MegaLogo.png" />
+    </div>
+
+    <div></div>
+  </div>
+
+  <div class="popup mx-auto">
+    <h2 class="heading1 text-center">
+      {{ "TERMS_CONDITIONS.TERMS_AND_CONDITIONS" | translate }}
+    </h2>
+    <div class="text-overflow">
+      <p class="content-style">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <br />
+        <br />
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </p>
+    </div>
+    <div class="custom-control custom-checkbox">
+      <input
+        type="checkbox"
+        class="custom-control-input"
+        id="customCheck1"
+        (click)="next()"
+      />
+      <label class="custom-control-label" for="customCheck1"
+        >{{ "TERMS_CONDITIONS.AGREE_TERMS_AND_CONDITIONS" | translate }}
+      </label>
+    </div>
+  </div>
+</section>

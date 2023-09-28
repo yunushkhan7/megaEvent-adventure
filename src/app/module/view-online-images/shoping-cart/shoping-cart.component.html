@@ -1,0 +1,132 @@
+<section id="body-bg">
+  <div class="header">
+    <div class="select-le">
+      <app-language></app-language>
+      &nbsp;
+      <button mat-flat-button color="primary" (click)="back()">
+        <mat-icon>
+          arrow_back
+        </mat-icon>
+        {{"ONLINE_PHOTOP_GALLERY.BACK" | translate}}
+      </button>
+    </div>
+
+
+
+    <div class="logo">
+      <img class="img-fluid" src="assets/images/white-MegaLogo.png" />
+    </div>
+
+
+
+    <div>
+      <button mat-flat-button color="primary">
+        <mat-icon>shopping_cart</mat-icon
+        >{{
+          "(" +
+            (this.selectedAllImages ? this.selectedAllImages.length : 0) +
+            ")"
+        }}
+      </button>
+    </div>
+  </div>
+  <div class="popup mx-auto">
+    <div class="images-overflow">
+      <div class="white-div">
+        <table style="width: 100%" class="mat-elevation-z8">
+          <tr class="head-tr">
+            <th>{{"ONLINE_PHOTOP_GALLERY.PRODUCT" | translate}}</th>
+            <th>{{"ONLINE_PHOTOP_GALLERY.PRICE" | translate}}</th>
+            <th>{{"ONLINE_PHOTOP_GALLERY.REMOVE" | translate}}</th>
+          </tr>
+          <tr *ngFor="let selectedImg of allImages; let i = index">
+          <ng-container *ngIf="selectedImg?.isSelected">
+            <td>
+              <div class="img-tex">
+                <img [src]="selectedImg?.imageContent" />
+                {{ selectedImg?.fileName }}
+              </div>
+            </td>
+            <td>{{ selectedImg?.digitalcopyprice }}</td>
+            <td>
+              <button
+                class="delete-button"
+                mat-flat-button
+                color="primary"
+                (click)="deleteFromCart(i)"
+              >
+                <mat-icon aria-hidden="false" fontIcon="delete"></mat-icon>
+              </button>
+            </td>
+          </ng-container>
+          </tr>
+          <h3 class="text-center" *ngIf="selectedAllImages.length==0">{{"ONLINE_PHOTOP_GALLERY.DATA_NOT_FOUND" | translate}}</h3>
+        </table>
+      </div>
+      <form [formGroup]="addForm">
+        <div class="white-div text-center">
+          <h3>{{"ONLINE_PHOTOP_GALLERY.ENTER_EMAIL_ADDRESS" | translate}}</h3>
+          <input
+            type="text"
+            class="input text-lowercase"
+            placeholder="test@abc.com"
+            [formControl]="addForm?.controls['email']"
+          />
+          <mat-error
+            *ngIf="
+              addForm.get('email').hasError('required') &&
+              addForm.get('email').touched
+            "
+            >{{"ONLINE_PHOTOP_GALLERY.EMAIL_IS_REQUIRED" | translate}}</mat-error
+          >
+          <mat-error *ngIf="addForm['controls']['email']?.errors?.pattern?.requiredPattern"><span>*</span>
+            {{"ONLINE_PHOTOP_GALLERY.INVAILD_EMAIL" | translate}}</mat-error>
+          <p class="content-style text-center">
+            {{"ONLINE_PHOTOP_GALLERY.ALL_DP_TO_EMAIL" | translate}}
+
+          </p>
+        </div>
+
+        <div class="white-div">
+          <!-- <input type="text" class="input mx-15" placeholder="Promo Code" [formControl]="addForm?.controls['promoCode']" />
+              <mat-error *ngIf="addForm.get('promoCode').hasError('required') && addForm.get('promoCode').touched">Promo Code is required</mat-error> -->
+          <div class="chekout-box">
+            <h4 class="cart-summary">{{"ONLINE_PHOTOP_GALLERY.CART_SUMMARY" | translate}}</h4>
+            <div
+              class="d-flex-ja mb-15"
+              *ngFor="let selectedImg of selectedAllImages; let i = index"
+            >
+              <span>{{ selectedImg?.fileName }}</span>
+              <span>{{"ONLINE_PHOTOP_GALLERY.DOLLOR" | translate}}{{ selectedImg?.digitalcopyprice }}</span>
+            </div>
+            <!-- <div class="d-flex-ja">
+                      <span class="color-r">MEGACOUPON</span>
+                      <span class="color-r">-$1.00</span>
+                  </div> -->
+            <hr class="hr-color" />
+
+            <div class="d-flex-ja">
+              <span><strong>{{"ONLINE_PHOTOP_GALLERY.GRAND_TOTAL" | translate}}</strong></span>
+              <span
+                ><strong>{{"ONLINE_PHOTOP_GALLERY.DOLLOR" | translate}}{{ grandTotal ? grandTotal : 0 }}</strong></span
+              >
+            </div>
+
+            <button
+              class="checkbox-btn"
+              mat-flat-button
+              color="primary"
+              [disabled]="!addForm.valid || !(selectedAllImages.length>0)"
+              (click)="submitForm()"
+            >
+              {{"ONLINE_PHOTOP_GALLERY.CHECKOUT" | translate}}
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<app-back-drop-loader *ngIf="isLoading"></app-back-drop-loader>

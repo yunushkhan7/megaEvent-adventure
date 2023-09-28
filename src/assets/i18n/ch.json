@@ -1,0 +1,30 @@
+{
+  "TERMS_CONDITIONS":{
+ "TERMS_AND_CONDITIONS":"条款和条件",
+ "AGREE_TERMS_AND_CONDITIONS":"我同意条款和条件"
+  },
+  "ONLINE_PHOTOP_GALLERY":{
+    "TERMS_AND_CONDITIONS":"条款和条件",
+    "AGREE_TERMS_AND_CONDITIONS":"我同意条款和条件",
+    "VISITING_OUR_ONLINE_SHOP":"感谢您访问我们的在线商店",
+    "DISPATCHED_EMAIL":"一封电子邮件将很快与您的数码照片一起发送",
+    "THE_REQUESTED_RESOURCE_DOES_NOT_EXIST":"请求的资源不存在或不再可用",
+    "OOPS":"哎呀！",
+    "WE_FOUND":"我们发现",
+    "PICTURES":"图片",
+    "ADD":"加",
+    "BACK":"返回",
+    "PRODUCT":"产品",
+    "PRICE":"价格",
+    "REMOVE":"移除",
+    "DATA_NOT_FOUND":"未找到数据",
+    "ENTER_EMAIL_ADDRESS":"输入您的",
+    "EMAIL_IS_REQUIRED":"需要电子邮件",
+    "INVAILD_EMAIL":"无效的电子邮件",
+    "ALL_DP_TO_EMAIL":"所有数码照片将发送至此电子邮件",
+    "CART_SUMMARY":"购物车摘要",
+    "GRAND_TOTAL":"累计",
+    "CHECKOUT":"查看",
+    "DOLLOR":"$"
+  }
+}

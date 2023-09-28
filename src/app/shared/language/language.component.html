@@ -1,0 +1,13 @@
+
+
+<mat-form-field>
+  <img src="assets/images/{{activeLang}}.svg" (selectionChange)="onLanguageChange()" width="10px"/>
+  <mat-select disableRipple [(ngModel)]="activeLang" (selectionChange)="onLanguageChange()">
+    <mat-option *ngFor="let language of language"
+    [value]="language?.code"
+    >
+      <img src="assets/images/{{language?.code}}.svg" width="10px" />  {{language?.value}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+

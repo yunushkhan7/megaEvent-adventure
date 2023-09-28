@@ -1,0 +1,73 @@
+
+.popup{
+min-height: auto;
+background-color: #000;
+}
+// ------------------------owl-carousel-------------------------
+.popup-slider {
+width: 330px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 65px;
+background-color: #000;
+
+@media (min-width:992px) {
+  width: 500px;
+}
+
+::ng-deep .owl-theme .owl-nav {
+  margin-top: 10px;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+::ng-deep .owl-theme .owl-nav .owl-prev{
+  background: #080808;
+  border-radius: 33px;
+}
+::ng-deep .owl-theme .owl-nav .owl-next{
+  background: #080808;
+  border-radius: 33px;
+}
+
+
+}
+
+::ng-deep .slide-popup{
+  max-width: 100% !important;
+  height: 100vh !important;
+  border-radius: 0px;
+
+  ::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
+    overflow-x: hidden;
+}
+
+  ::ng-deep .mat-mdc-dialog-container {
+    --mdc-dialog-container-color: #000000;
+  }
+}
+
+.close--btn{
+  display: flex;
+  justify-content: flex-end;
+  button{
+    border: none;
+    background: transparent;
+    color: #fff;
+    .mat-icon{
+      font-size: 20px;
+    }
+
+  }
+}
+
+
+.cart--btn{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}

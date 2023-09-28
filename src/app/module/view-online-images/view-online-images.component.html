@@ -1,0 +1,48 @@
+<section id="body-bg">
+  <div class="header">
+    <div class="select-le">
+      <app-language></app-language>
+    </div>
+
+
+    <div class="logo">
+      <img class="img-fluid" src="assets/images/white-MegaLogo.png" />
+    </div>
+
+    <div>
+      <button mat-flat-button color="primary" (click)="next()">
+        <mat-icon>shopping_cart}</mat-icon
+        >{{
+          "(" +
+            (this.selectedAllImages ? this.selectedAllImages.length : 0) +
+            ")"
+        }}
+      </button>
+    </div>
+  </div>
+
+  <div class="popup mx-auto">
+    <h5 class="heading2" *ngIf="allImages">
+    {{"ONLINE_PHOTOP_GALLERY.WE_FOUND" | translate}}<strong>{{ allImages?.length }}</strong> {{"ONLINE_PHOTOP_GALLERY.PICTURES" | translate}}
+    </h5>
+    <div class="images-overflow">
+      <div class="mega-images" *ngFor="let image of allImages; let i = index">
+        <button class="zoom-button" mat-stroked-button (click)="zoomDilog(i)">
+          <mat-icon>zoom_in</mat-icon>
+        </button>
+        <button
+          class="add-button"
+          mat-flat-button
+          color="primary"
+          (click)="cartCount(i)"
+          [disabled]="image?.isSelected"
+        >
+          <mat-icon>shopping_cart</mat-icon>{{"ONLINE_PHOTOP_GALLERY.ADD" | translate}}
+        </button>
+        <img [src]="image?.imageContent" />
+      </div>
+    </div>
+  </div>
+</section> 
+
+<app-back-drop-loader *ngIf="isLoading"></app-back-drop-loader>

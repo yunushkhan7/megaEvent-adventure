@@ -1,0 +1,30 @@
+{
+  "TERMS_CONDITIONS":{
+ "TERMS_AND_CONDITIONS":"利用規約",
+ "AGREE_TERMS_AND_CONDITIONS":"私は利用規約に同意します"
+  },
+  "ONLINE_PHOTOP_GALLERY":{
+    "TERMS_AND_CONDITIONS":"利用規約",
+    "AGREE_TERMS_AND_CONDITIONS":"私は利用規約に同意します",
+    "VISITING_OUR_ONLINE_SHOP":"オンラインショップをご覧いただきありがとうございます",
+    "DISPATCHED_EMAIL":"デジタル写真を添付し​​た電子メールが間もなく送信されます",
+    "THE_REQUESTED_RESOURCE_DOES_NOT_EXIST":"要求されたリソースが存在しないか、もう利用できません",
+    "OOPS":"おっと ！",
+    "WE_FOUND":"見つけました",
+    "PICTURES":"ピクチャー",
+    "ADD":"追加",
+    "BACK":"戻る",
+    "PRODUCT":"製品",
+    "PRICE":"価格",
+    "REMOVE":"取り除く",
+    "DATA_NOT_FOUND":"データが見つかりません",
+    "ENTER_EMAIL_ADDRESS":"メールアドレスを入力してください",
+    "EMAIL_IS_REQUIRED":"メールアドレスは必須です",
+    "INVAILD_EMAIL":"無効な電子メール",
+    "ALL_DP_TO_EMAIL":"すべてのデジタル写真はこのメールに送信されます",
+    "CART_SUMMARY":"カートの概要",
+    "GRAND_TOTAL":"総計",
+    "CHECKOUT":"チェックアウト",
+    "DOLLOR":"$"
+  }
+}

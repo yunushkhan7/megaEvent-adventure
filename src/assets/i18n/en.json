@@ -1,0 +1,30 @@
+{
+  "TERMS_CONDITIONS":{
+ "TERMS_AND_CONDITIONS":"Terms and Conditions",
+ "AGREE_TERMS_AND_CONDITIONS":"I Agree to the Terms and Conditions"
+  },
+  "ONLINE_PHOTOP_GALLERY":{
+    "TERMS_AND_CONDITIONS":"Terms and Conditions",
+    "AGREE_TERMS_AND_CONDITIONS":"I Agree to the Terms and Conditions",
+    "VISITING_OUR_ONLINE_SHOP":"Thank you for visiting our online shop",
+    "DISPATCHED_EMAIL":"An email will be dispatched shortly with your digital photos",
+    "THE_REQUESTED_RESOURCE_DOES_NOT_EXIST":"The requested resource does not exist or is no longer available",
+    "OOPS":"Oops !",
+    "WE_FOUND":"We found",
+    "PICTURES":"pictures",
+    "ADD":"Add",
+    "BACK":"Back",
+    "PRODUCT":"Product",
+    "PRICE":"Price",
+    "REMOVE":"Remove",
+    "DATA_NOT_FOUND":"Data not found",
+    "ENTER_EMAIL_ADDRESS":"Enter your email Address",
+    "EMAIL_IS_REQUIRED":"Email is required",
+    "INVAILD_EMAIL":"Invalid Email",
+    "ALL_DP_TO_EMAIL":"All digital photos will be sent to this email",
+    "CART_SUMMARY":"Cart Summary",
+    "GRAND_TOTAL":"Grand Total",
+    "CHECKOUT":"Checkout",
+    "DOLLOR":"$"
+  }
+}

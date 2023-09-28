@@ -1,0 +1,17 @@
+
+  <div class="close--btn">
+    <button class="zoom-button" mat-stroked-button (click)="okClose()"><mat-icon>close</mat-icon></button>
+   </div>
+  <div class="popup-slider">
+    <!-- <div class="cart--btn">
+        <button mat-flat-button color="primary" (click)="next()"><mat-icon>shopping_cart</mat-icon>Add</button>
+    </div> -->
+  <owl-carousel-o [options]="customOptions" #carousel>
+    <ng-template carouselSlide *ngFor="let selectedImg of allImages; let i=index"   [id]="i">
+      <div class="cart--btn">
+        <button mat-flat-button color="primary"  (click)="cartCount(i)" [disabled]="selectedImg?.isSelected"><mat-icon>shopping_cart</mat-icon>Add</button>
+    </div>
+      <img [src]="selectedImg?.imageContent" #carousel4>
+  </ng-template>
+  </owl-carousel-o>
+  </div>
